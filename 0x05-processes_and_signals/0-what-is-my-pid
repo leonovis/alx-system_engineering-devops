@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-#Bash script that prints the PID
-echo $$
+# Write a Bash script that displays its own PID.
+
+echo "My PID is $$"
+
