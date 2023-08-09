@@ -1,6 +1,13 @@
-# Changes SSH config file
-exec { 'echo':
-  path    => 'usr/bin:/bin',
-  command => 'echo "    IdentityFile ~/.ssh/holberton\n    PasswordAuthentication no" >> /etc/ssh/ssh_config',
-  returns => [0,1],
+# enables connection to server without a password
+
+file_line {
+  'passAuth':
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => '   PasswordAuthentication no'
+  ;
+  'keyLocation':
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => '   IdentityFile ~/.ssh/school'
 }
