@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Installs, configures, and starts the server
-# Imanol Asolo
+# leo
 apt-get update
 apt-get install -y nginx
 chown -R ubuntu /var/www
